@@ -128,6 +128,9 @@
 // console.log(x);
 // // JavaScript evaluates expressions from left to right
 
+// const example = "This is a 'string' with a \"double quote\" inside.";
+// // string are escaped with a backslash (\).
+
 
 
 // 8) JavaScript Assignment
@@ -143,3 +146,37 @@
 
 // ?= operator is used between two values. If the first value is undefined or null, 
 // the second value is assigned.if first value is true then first value is assigned
+
+
+// 9) JavaScript Objects
+
+//Object Definition
+// const person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 50,
+//     eyeColor: "blue"
+//     fullName : function() {
+//         return this.firstName + " " + this.lastName;
+//     }
+//   };
+
+//Accessing Object Properties
+// person.lastName; // Doe
+// person["lastName"]; // Doe
+
+// name = person.fullName();
+// name = person.fullName; //it will return the function definition 
+// like function() { return this.firstName + " " + this.lastName; }
+
+// Notes : Do Not Declare Strings, Numbers, and Booleans as Objects!
+// They complicate your code and slow down execution speed.
+
+// 10) HTML Events
+// HTML event can be something the browser does, or something a user does.
+// onchange	An HTML element has been changed
+// onclick	The user clicks an HTML element
+// onmouseover	The user moves the mouse over an HTML element
+// onmouseout	The user moves the mouse away from an HTML element
+// onkeydown	The user pushes a keyboard key
+// onload	The browser has finished loading the page

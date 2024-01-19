@@ -24,6 +24,7 @@
 // String
 // Symbol
 // Number
+// Bigint
 // object
 
 // 2) declare variable(Case Sensitive)
@@ -120,6 +121,13 @@
 // let a="2";
 // let b="3"
 // console.log(a*b) // 6
+
+// let x = 16 + 4 + "venom"; // 20venom
+// let x = "Dodge" + 16 + 4; // Dodge164
+// let x = 16 + "Dodge" + 4; // 16Dodge4 16+"Dodge" converted to string so string+num=string
+// console.log(x);
+// // JavaScript evaluates expressions from left to right
+
 
 
 // 8) JavaScript Assignment

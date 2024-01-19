@@ -180,3 +180,38 @@
 // onmouseout	The user moves the mouse away from an HTML element
 // onkeydown	The user pushes a keyboard key
 // onload	The browser has finished loading the page
+
+
+// 11) String
+
+//length
+// .length // not ()in Js unlike C++
+
+// Template Strings(use ` sign)
+// let text =
+// `The quick
+// brown fox
+// jumps over
+// the lazy dog`;
+
+// let x = "John";
+// let y = new String("John");
+// x==y -> true
+
+// let x = new String("John");
+// let y = new String("John");
+// x==y -> false
+
+
+// When you compare two JavaScript objects using the equality operator (== or ===), 
+// the comparison is based on reference equality, not structural equality. 
+// This means that the objects are considered equal only if they reference the exact same object 
+// in memory.
+// const obj1 = { key: 'value' };
+// const obj2 = { key: 'value' };
+
+// console.log(obj1 === obj2); // Output: false
+// console.log(obj1 == obj2);  // Output: false
+
+//If you want to compare the contents of the objects
+// JSON.stringify(obj1) === JSON.stringify(obj2)

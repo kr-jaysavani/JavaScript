@@ -113,3 +113,25 @@
 
 // let a="5"-5; // 0
 // let a=5-"5"; // 0
+
+// let a="a";
+// let b="b"
+// console.log(a*b) // nan
+// let a="2";
+// let b="3"
+// console.log(a*b) // 6
+
+
+// 8) JavaScript Assignment
+
+// let x = 10;
+// x &&= 5;
+// // x=5  If the first value is true, the second value is assigned.
+
+// let x = 10;
+// x ||= 5;
+// // x=10  If the first value is true, the first value is assigned.
+// // x=5   if the first value is false, second value is assigned.(like if x=undefine)
+
+// ?= operator is used between two values. If the first value is undefined or null, 
+// the second value is assigned.if first value is true then first value is assigned

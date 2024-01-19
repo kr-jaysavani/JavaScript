@@ -68,3 +68,48 @@
 //   }
 //   hoisting does not occur on function expressions.
 //Uncaught ReferenceError: Cannot access 'printHello' before initialization
+
+// 4) JavaScript Operators
+// +	Addition
+// -	Subtraction
+// *	Multiplication
+// **	Exponentiation (ES2016)
+// /	Division
+// %	Modulus (Division Remainder)
+// ++	Increment
+// --	Decrement
+
+//5) JavaScript Comparison Operators
+// ==	equal to
+// ===	equal value and equal type
+// !=	not equal
+// !==	not equal value or not equal type
+// >	greater than
+// <	less than
+// >=	greater than or equal to
+// <=	less than or equal to
+// ?	ternary operator
+
+// 6) JavaScript String Comparison
+// let text1 = "A";
+// let text2 = "B";
+// let result = text1 < text2; // true
+
+// let text1 = "20";
+// let text2 = "5";
+// let result = text1 < text2;
+// console.log(result) // true because strings are compared alphabetically:
+
+// 7) Adding Strings and Numbers
+
+// let x = 5 + 5; // 10
+// let y = "5" + 5; // 55
+// let z = "Hello" + 5; //Hello5
+// console.log(typeof(z)) // string
+
+// let a = 5 + +"5"; // 10   additional + for convert string to num
+// console.log(typeof(a))
+// // typeof	Returns the type of a variable
+
+// let a="5"-5; // 0
+// let a=5-"5"; // 0

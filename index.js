@@ -234,13 +234,13 @@
 // console.log(a.concat(" ",b)); // i am venom f5. ok
 // console.log(a + " " + b); // i am venom f5. ok
 
-// trim
+// 12.1 trim
 // let c = "  hi f5  "
 // console.log(c.trim());      //|hi f5|
 // console.log(c.trimStart()); //|hi f5  |
 // console.log(c.trimEnd());   //|  hi f5|
 
-// Padding
+// 12.2 Padding
 // let j = 5;
 // // console.log(j.padStart(4,"x")); // Uncaught TypeError: j.padStart is not a function
 // // you have to convert into string
@@ -250,13 +250,13 @@
 // // it has length 1 so only add 3 x maxlength is 4.
 // // same  padEnd() add at the end
 
-//repeat
+//12.3 repeat
 // repeat() method does not change the original string.
 // return new string 
 // let a="ok"
 // console.log(a.repeat(4)); // okokokok
 
-//replace
+//12.4 replace
 // The replace() method replaces only the first match
 // case sensitive
 
@@ -269,15 +269,78 @@
 
 // let text = "Please visit Knackroot Knackroot!";
 // let newText = text.replace(/Knackroot/g, "Blockchain"); // g flag replace all matches and not in string
+// let newText = text.replace(/KNACKROOT/gi, "Blockchain"); //replace all matches and insensitive
 // console.log(newText); // Please visit Blockchain Blockchain!
 // console.log(text.replaceAll("Knackroot","Blockchain")); // In 2021
 
-// Converting a String to an Array
+// 12.5 Converting a String to an Array
 // let text = "a,b,c,d,e,f";
 // const myArray = text.split(",");
 // console.log(myArray); // (6) ['a', 'b', 'c', 'd', 'e', 'f']
 
-// Extracting String Parts
+// 12.6 JavaScript String Search
+
+// 1.indexOf // index (position) of the first occurrence
+
+// let text = "Please locate where 'locate' occurs!";
+// let index = text.indexOf("locate");     // 7
+
+// 2.lastIndexOf() // index of last occurrence methods,
+                    // searches backwards (from the end to the beginning),
+
+// let text = "Please locate where 'locate' occurs!";
+// text.lastIndexOf("locate", 15); // 7  search starts at position 15, 
+                                    // and searches to the beginning of the string.
+                    
+// both return -1 if not found
+
+// 3.search() // index (position) of the first occurrence
+
+// let text = "Please locate where 'locate' occurs!";
+// text.search("locate"); // 7
+// text.search(/locate/); // 7
+
+// These are the differences:
+
+// The search() method cannot take a second start position argument.
+// The indexOf() method cannot take powerful search values (regular expressions).
+
+// 4.match()
+// match() method returns an array containing the results of matching a string 
+// let text = "The rain in SPAIN stays mainly in the plain";
+// console.log(text.match(/ain/gi)); // (4) ['ain', 'AIN', 'ain', 'ain']
+
+// 5.matchAll()
+// let text = "I love cats. Cats are very easy to love. Cats are very popular."
+// const iterator = text.matchAll("Cats");
+// console.log(iterator);
+// console.log(Array.from(iterator));
+//(2) [Array(1), Array(1)]
+// 0: ['Cats', index: 13, input: 'I love cats. Cats are very easy to love. Cats are very popular.', groups: undefined]
+// 1: ['Cats', index: 41, input: 'I love cats. Cats are very easy to love. Cats are very popular.', groups: undefined]
+// length: 2
+
+// 6.includes()
+// case sensitive.
+
+// let text = "Hello world, welcome to the universe.";
+// console.log(text.includes("world", -1)); // true
+// text.includes("world"); // true
+// text.includes("world", 12);// false because start from 12 position
+
+// 7.startsWith()
+// returns true if a string begins with a specified value
+// let text = "Hello world, welcome to the universe.";
+// console.log(text.startsWith("world", 5));   // false
+// text.startsWith("world", 6) // true
+// console.log(text.startsWith("world", -5));   // false
+
+// 8.endsWith()
+// let text = "Hello world, welcome to the universe.";
+// text.endsWith("world", 11); // true matching start from 10 index to start
+
+
+// 12.7 Extracting String Parts
 
 // let a="iamvenom f5."
 
@@ -303,6 +366,38 @@
 // console.log(a.substr(-3,7)); //f5.      -3 to end 
 
 
+// 13) Number Method
 
+// 13.1 toString()
+// let myNumber = 32;
+// myNumber.toString(32);
+// myNumber.toString(16);
+// myNumber.toString(12);
+// myNumber.toString(10);
+// myNumber.toString(8);
+// myNumber.toString(2);
 
-// 13)
+// 13.2 toExponential() Method
+// toExponential() returns a string, with a number rounded and written using exponential notation.
+// let x = 9.656;
+// x.toExponential(2)  // 9.66e+0
+// x.toExponential(4)  // 9.6560e+0
+
+// 13.3 toFixed() // toFixed(2) is perfect for working with money.
+// return round of vale after "."
+// let x = 9.656;
+// x.toFixed(0);   // 10
+// x.toFixed(2);   // 9.66
+// x.toFixed(4);   // 9.6560
+
+// 13.4 toPrecision()
+// same as tofixed but number specify length of numbe
+// let x = 9.656;
+// x.toPrecision(2) // 9.7
+// x.toPrecision(4) // 9.656    not count "." only number
+
+// 13.5 parseInt()
+// parseInt("10 6")    // 10
+// parseInt("10 years")    //10
+// parseInt("years 10")    //NaN
+// same for parseFloat()

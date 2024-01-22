@@ -184,8 +184,8 @@
 
 // 11) String
 
-//length
-// .length // not ()in Js unlike C++
+//for length
+// .length // not ()in Js 
 
 // Template Strings(use ` sign)
 // let text =
@@ -215,3 +215,94 @@
 
 //If you want to compare the contents of the objects
 // JSON.stringify(obj1) === JSON.stringify(obj2)
+
+// 12) String Methods
+
+// Strings are immutable: Strings cannot be changed, only replaced.
+
+    // let a="i am venom f5."
+    // let b="ok"
+
+// console.log(a.length); // 14
+// console.log(a.at(0)); // i       allows the use of negative indexes 
+// console.log(a.charAt(0)); // i       negative indexes not allowed
+// console.log(a.charCodeAt(0));// 105          UTF-16 code (an integer between 0 and 65535).
+// a[0] = "I";    // Gives no error, but does not work
+// console.log(a); // i am venom f5. 
+// console.log(a.toUpperCase());
+// console.log(a.toLowerCase());
+// console.log(a.concat(" ",b)); // i am venom f5. ok
+// console.log(a + " " + b); // i am venom f5. ok
+
+// trim
+// let c = "  hi f5  "
+// console.log(c.trim());      //|hi f5|
+// console.log(c.trimStart()); //|hi f5  |
+// console.log(c.trimEnd());   //|  hi f5|
+
+// Padding
+// let j = 5;
+// // console.log(j.padStart(4,"x")); // Uncaught TypeError: j.padStart is not a function
+// // you have to convert into string
+// let a=j.toString();
+// console.log(a.padStart(4,"x")); // xxx5     
+// //add 3 x because pad make length of string 4
+// // it has length 1 so only add 3 x maxlength is 4.
+// // same  padEnd() add at the end
+
+//repeat
+// repeat() method does not change the original string.
+// return new string 
+// let a="ok"
+// console.log(a.repeat(4)); // okokokok
+
+//replace
+// The replace() method replaces only the first match
+// case sensitive
+
+// let text = "Please visit Knackroot!";
+
+// let newText = text.replace("Knackroot", "Blockchain");
+// console.log(newText); // Please visit Blockchain!
+
+// let newText = text.replace(/KNACKROOT/i, "Blockchain"); // i flag (insensitive) and not in string
+
+// let text = "Please visit Knackroot Knackroot!";
+// let newText = text.replace(/Knackroot/g, "Blockchain"); // g flag replace all matches and not in string
+// console.log(newText); // Please visit Blockchain Blockchain!
+// console.log(text.replaceAll("Knackroot","Blockchain")); // In 2021
+
+// Converting a String to an Array
+// let text = "a,b,c,d,e,f";
+// const myArray = text.split(",");
+// console.log(myArray); // (6) ['a', 'b', 'c', 'd', 'e', 'f']
+
+// Extracting String Parts
+
+// let a="iamvenom f5."
+
+// 1.slice()   extracts a part of a string and returns the extracted part in a new string.
+//             take 2 parameters: start position, and end position (end not included).
+// console.log(a.slice(1,3)); // am
+// console.log(a.slice(-1,4).length); // 0
+// console.log(a.slice(-9));// venom f5.    from -9 to end
+// console.log(a.slice(-9,-4)); // venom
+// start - end number of char selected from start
+
+// 2.substring() 
+// similar to slice, but start and end values less than 0 are treated as 0.
+// console.log(a.substring(0,8)) // iamvenom    0 to 8 char till index 7.
+// console.log(a.substring(-1,5)); //iamve      from 0 to 4 index 
+// console.log(a.substring(4,-5)); // iamve     think like (0,4)
+
+// 3.substr()
+// similar to slice, but second parameter specifies the length of the extracted part.
+// console.log(a.substr(9,2)); f5       from 9 to 2 char 
+// console.log(a.substr(-8)); // enom f5.   -8 to end
+// console.log(a.substr(-8,-4).length); // 0
+// console.log(a.substr(-3,7)); //f5.      -3 to end 
+
+
+
+
+// 13)

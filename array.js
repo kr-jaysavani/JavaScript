@@ -80,7 +80,117 @@
 // console.log(newArr); // (6) [1, 2, 3, 4, 5, 6]
 
 // 2.9) splice() -> original also changed
+//adds new items to an array.
+// splice() to remove elements without leaving "holes"
+
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // let removed = fruits.splice(2, 2, "Lemon", "Kiwi"); 
 // console.log(fruits); // Banana,Orange,Lemon,Kiwi
 // console.log(removed);// Apple,Mango
+
+// fruits.splice(2, 0, "Lemon", "Kiwi");
+// console.log(fruits); // (6) ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango']
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// console.log(fruits.splice(0,2));    // (2) ['Banana', 'Orange']
+// console.log(fruits); // (2) ['Apple', 'Mango']
+
+
+// 2.10) toSpliced()
+// return original array after operation
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// console.log(fruits.toSpliced(0,2));    // (2) ['Apple', 'Mango']  
+// console.log(fruits); // (4) ['Banana', 'Orange', 'Apple', 'Mango']
+
+// 2.11) slice() -> original remain as it is
+// creates a new array.
+
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// const citrus = fruits.slice(1);  
+// console.log(citrus);    // (4) ['Orange', 'Lemon', 'Apple', 'Mango']  new array from index 1
+// console.log(fruits.slice(1,3)); // (2) ['Orange', 'Lemon']  last index not include
+
+
+// 3) Array Search
+
+// 3.1) indexOf() 
+// array.indexOf(item, start)
+// method searches an array for an element value and returns its position.
+// returns -1 if the item is not found.
+// fruits.indexOf("Apple")
+
+// 3.2)  lastIndexOf()
+// array.lastIndexOf(item, start)
+// returns the position of the last occurrence
+
+// 3.3) Array find()
+// returns the value of the first array element that passes a test function
+// const numbers = [4, 9, 16, 25, 29];
+// let first = numbers.find(myFunction); // 25
+
+// function myFunction(value, index, array) {
+//   return value > 18;
+// }
+
+// 3.4) Array findIndex()
+// returns the index of the first array element that passes a test function.
+// console.log(numbers.findIndex(myFunction)); // 3
+
+// 3.5) findLast()
+// start from the end of an array and return the value of the first element that satisfies a condition.
+
+// 3.5) findLastIndex() 
+// return last index
+
+
+// 4) Sorting Arrays 
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// 4.1) sort() -> alter the original array.
+// method sorts an array alphabetically
+
+// fruits.sort();// Apple,Banana,Mango,Orange
+// console.log(fruits);
+
+// 4.2) reverse() ->  alter the original array.
+// reverses the elements in an array.
+// fruits.reverse() // Mango,Apple,Orange,Banana
+
+// By combining sort()[first operation] and reverse()[second operation], 
+// you can sort an array in descending order
+
+// 4.3) toSorted() and toReversed() ->  without altering the original array.
+
+
+// 4.5)Numeric Sort
+
+// const points = [40, 100, 1, 5, 25, 10];
+// points.sort(function (a, b){return a - b}); // increasing
+// points.sort(function (a,b){return b - a}); // decreasing
+// both alter the original array.
+
+// 4.6) The Fisher Yates Method -> for randomly shuffle array
+
+// const points = [40, 100, 1, 5, 25, 10];
+
+// for (let i = points.length -1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * (i+1));
+//   let k = points[i];
+//   points[i] = points[j];
+//   points[j] = k;
+// }
+// console.log(points);
+
+// 4.7) Sorting Object Arrays
+
+// const cars = [
+//     {type:"Volvo", year:2016},
+//     {type:"Saab", year:2001},
+//     {type:"BMW", year:2010}
+//   ];
+// cars.sort(function(a, b){return a.year - b.year});
+
+// Saab 2001
+// BMW 2010
+// Volvo 2016

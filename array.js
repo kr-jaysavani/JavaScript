@@ -145,7 +145,7 @@
 
 // 4) Sorting Arrays 
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 // 4.1) sort() -> alter the original array.
 // method sorts an array alphabetically
@@ -194,3 +194,137 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // Saab 2001
 // BMW 2010
 // Volvo 2016
+
+
+// 5) Array Iteration
+
+// 5.1) forEach() -> run callback fun
+// forEach() method calls a function (a callback function) once for each array element.
+// function takes 3 arguments:
+
+// The item value
+// The item index
+// The array itself
+
+// arr.forEach(myFunction);
+
+// function myFunction(value, index, array) {
+// }
+
+// 5.2) map -> run callback fun and create new array
+// does not change the original array.
+// creates a new array
+// const numbers1 = [45, 4, 9, 16, 25];
+// const numbers2 = numbers1.map(myFunction);
+
+// function myFunction(value, index, array) {
+//   return value * 2;
+// }
+
+//5.3)flatMap() -> same as map but first maps all elements of an array 
+                    // and then creates a new array by flattening the array.
+// const words = ['hello', 'john'];
+// const letters = words.flatMap(word => word.split('')); 
+// letters will be ['h', 'e', 'l', 'l', 'o', 'j', 'o', 'h', 'n']
+
+// const letters = words.map(word => word.split(''));
+// (2) [Array(5), Array(4)]
+// 0: (5) ['h', 'e', 'l', 'l', 'o']
+// 1: (4) ['j', 'o', 'h', 'n']
+// length: 2
+// console.log(letters);
+
+
+// Differences between map and flatMap:
+
+// Flattening:
+// map() always returns an array with the same number of elements as the original array.
+// flatMap() can return an array with a different length if the mapping function produces arrays of varying lengths.
+
+// Nested Arrays:
+// map() may produce nested arrays if the mapping function returns arrays.
+// flatMap() ensures a flat result by concatenating the arrays returned by the mapping function.
+
+// Handling Empty Arrays:
+// map() will include undefined elements for empty slots in the resulting array if the original array has holes (sparse array).
+// flatMap() will remove empty slots in the resulting array.
+
+// 5.4) Array filter() -> run callback fun and if ele pass test include in new array
+
+// const numbers = [45, 4, 9, 16, 25];
+// const over18 = numbers.filter(myFunction); // 45,25
+
+// function myFunction(value) {
+//   return value > 18;
+// }
+
+// 5.6) reduce() -> run callback fun for all ele and produce(reduce) single value
+// not reduce the original array.
+// from left-to-right in the array
+
+// const numbers = [45, 4, 9, 16, 25];
+// let sum = numbers.reduce(myFunction);
+
+// function myFunction(total, value, index, array) {
+//   return total + value;
+// }
+
+// function takes 4 arguments:
+
+// The total (the initial value / previously returned value)
+// The item value
+// The item index
+// The array itself
+
+// reduce() method can accept an initial value:
+// let sum = numbers.reduce(myFunction, 100);
+
+// reduceRight() right to left
+
+// 5.7) Array every()
+// checks if all array values pass a test.
+// return true or false
+
+// const numbers = [45, 4, 9, 16, 25];
+// let allOver18 = numbers.every(myFunction);
+
+// function myFunction(value, index, array) {
+//   return value > 18;
+// }
+
+// 5.8) some() -> if some array values pass a test.
+// return boolean 
+
+// 5.9) Array.from()
+// returns an Array object from any object with a length property or any iterable object
+// const numbers = [45, [4, 9, 16], 25];
+// const newarr = Array.from(numbers);
+// Array.from("num");
+// console.log(newarr);
+
+
+// 5.10) Array keys()
+// return array of key
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const keys = fruits.keys();      // [0,1,2,3]
+
+// 5.11) entries
+// Create an Array Iterator 
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const f = fruits.entries();
+// console.log(f); // Array Iterator {}
+// for(let x of f)
+// {
+//     // x is array of key and value
+//     console.log(x);
+//     console.log(x[1]); // for value
+// }
+
+// 5.12) with() -> update elements in an array without altering the original array.
+
+// const months = ["Januar", "Februar", "Mar", "April"];
+// const myMonths = months.with(2, "March"); // Januar,Februar,March,April
+
+// 5.13) Spread(...)
+// expands an iterable (like an array) into more elements

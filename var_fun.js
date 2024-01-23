@@ -74,6 +74,7 @@
 // call() and apply() methods 
 // both be used to call an object method with another object as argument
 
+
 // const person1 = {
 //     fullName: function() {
 //       return this.firstName + " " + this.lastName;
@@ -86,6 +87,11 @@
 //   }
   
 //   console.log(person1.fullName.call(person2));    // Return "John Doe":
+
+// The call() method takes arguments separately.
+// The apply() method takes arguments as an array.
+// person.fullName.call(person1, "Oslo", "Norway");
+// person.fullName.apply(person1, ["Oslo", "Norway"]);
 
 
 //   With the bind() method, an object can borrow a method from another object.
@@ -123,4 +129,22 @@
 
 // With arrow functions the this keyword always represents 
 // the object that defined the arrow function.
+
+
+// When a function is used as a callback, this is lost.
+// const person = {
+//     firstName:"John",
+//     lastName: "Doe",
+//     display: function () {
+//       let x = document.getElementById("demo");
+//       x.innerHTML = this.firstName + " " + this.lastName;
+//     }
+//   }
+  
+//   setTimeout(person.display, 3000);   // undefine undefine
+
+// bind() method solves this problem.
+
+// let display = person.display.bind(person);
+// setTimeout(display, 3000);
 

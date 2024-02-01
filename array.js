@@ -9,7 +9,6 @@
 //JavaScript does not support arrays with named indexes.
 // In JavaScript, arrays always use numbered indexes
 
-
 // const points = [40];     // Create an array with one element:
 // const points = new Array(40);    // Create an array with 40 undefined elements:
 // is not the same:
@@ -35,7 +34,7 @@
 
 // console.log(fruits.push("Lemon") );  // 5      push ele at last in array
 // fruits[6]="ok"
-// console.log(fruits[5]); // undefined    insert at 6 index direct create undefined "holes" 
+// console.log(fruits[5]); // undefined    insert at 6 index direct create undefined "holes"
 // console.log(fruits.length);// 7
 
 // 2.4) Array shift() and unshift()
@@ -58,7 +57,7 @@
 // const myBoys = ["Emil", "Tobias", "Linus"];
 
 // const myChildren = myGirls.concat(myBoys); // Cecilie,Lone,Emil,Tobias,Linus
-// const myChildren = myGirls.concat("Peter"); 
+// const myChildren = myGirls.concat("Peter");
 
 // 2.7) copyWithin() -> original also changed
 // does not add items to the array
@@ -84,7 +83,7 @@
 // splice() to remove elements without leaving "holes"
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// let removed = fruits.splice(2, 2, "Lemon", "Kiwi"); 
+// let removed = fruits.splice(2, 2, "Lemon", "Kiwi");
 // console.log(fruits); // Banana,Orange,Lemon,Kiwi
 // console.log(removed);// Apple,Mango
 
@@ -95,25 +94,23 @@
 // console.log(fruits.splice(0,2));    // (2) ['Banana', 'Orange']
 // console.log(fruits); // (2) ['Apple', 'Mango']
 
-
 // 2.10) toSpliced()
 // return original array after operation
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// console.log(fruits.toSpliced(0,2));    // (2) ['Apple', 'Mango']  
+// console.log(fruits.toSpliced(0,2));    // (2) ['Apple', 'Mango']
 // console.log(fruits); // (4) ['Banana', 'Orange', 'Apple', 'Mango']
 
 // 2.11) slice() -> original remain as it is
 // creates a new array.
 
 // const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-// const citrus = fruits.slice(1);  
+// const citrus = fruits.slice(1);
 // console.log(citrus);    // (4) ['Orange', 'Lemon', 'Apple', 'Mango']  new array from index 1
 // console.log(fruits.slice(1,3)); // (2) ['Orange', 'Lemon']  last index not include
 
-
 // 3) Array Search
 
-// 3.1) indexOf() 
+// 3.1) indexOf()
 // array.indexOf(item, start)
 // method searches an array for an element value and returns its position.
 // returns -1 if the item is not found.
@@ -139,11 +136,10 @@
 // 3.5) findLast()
 // start from the end of an array and return the value of the first element that satisfies a condition.
 
-// 3.5) findLastIndex() 
+// 3.5) findLastIndex()
 // return last index
 
-
-// 4) Sorting Arrays 
+// 4) Sorting Arrays
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
@@ -157,11 +153,10 @@
 // reverses the elements in an array.
 // fruits.reverse() // Mango,Apple,Orange,Banana
 
-// By combining sort()[first operation] and reverse()[second operation], 
+// By combining sort()[first operation] and reverse()[second operation],
 // you can sort an array in descending order
 
 // 4.3) toSorted() and toReversed() ->  without altering the original array.
-
 
 // 4.5)Numeric Sort
 
@@ -195,7 +190,6 @@
 // BMW 2010
 // Volvo 2016
 
-
 // 5) Array Iteration
 
 // 5.1) forEach() -> run callback fun
@@ -221,10 +215,10 @@
 //   return value * 2;
 // }
 
-//5.3)flatMap() -> same as map but first maps all elements of an array 
-                    // and then creates a new array by flattening the array.
+//5.3)flatMap() -> same as map but first maps all elements of an array
+// and then creates a new array by flattening the array.
 // const words = ['hello', 'john'];
-// const letters = words.flatMap(word => word.split('')); 
+// const letters = words.flatMap(word => word.split(''));
 // letters will be ['h', 'e', 'l', 'l', 'o', 'j', 'o', 'h', 'n']
 
 // const letters = words.map(word => word.split(''));
@@ -233,7 +227,6 @@
 // 1: (4) ['j', 'o', 'h', 'n']
 // length: 2
 // console.log(letters);
-
 
 // Differences between map and flatMap:
 
@@ -293,7 +286,7 @@
 // }
 
 // 5.8) some() -> if some array values pass a test.
-// return boolean 
+// return boolean
 
 // 5.9) Array.from()
 // returns an Array object from any object with a length property or any iterable object
@@ -302,14 +295,13 @@
 // Array.from("num");
 // console.log(newarr);
 
-
 // 5.10) Array keys()
 // return array of key
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // const keys = fruits.keys();      // [0,1,2,3]
 
 // 5.11) entries
-// Create an Array Iterator 
+// Create an Array Iterator
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // const f = fruits.entries();
@@ -328,3 +320,127 @@
 
 // 5.13) Spread(...)
 // expands an iterable (like an array) into more elements
+
+// 5.14) for in  and for of
+
+// const colors = [1, 2, 3, 4];
+
+// for (let color in colors) {
+//   console.log(color); // 0,1,2,3
+// }
+// for (let color of colors) {
+//   console.log(color); //1,2,3,4
+// }
+
+// let colors1 = new Map();
+
+// colors1.set("red", "#ff0000");
+// colors1.set("green", "#00ff00");
+// colors1.set("blue", "#0000ff");
+
+// for (let color in colors1) {
+//   console.log(color); // nothing
+// }
+// for (let color of colors1) {
+//   console.log(color);
+// }
+//[ 'red', '#ff0000' ]
+// [ 'green', '#00ff00' ]
+// [ 'blue', '#0000ff' ]
+
+// const ratings = [
+//   { user: "John", score: 3 },
+//   { user: "Jane", score: 4 },
+//   { user: "David", score: 5 },
+//   { user: "Peter", score: 2 },
+// ];
+
+// for (const score in ratings) {
+//   console.log(score); //0,1,2,3
+// }
+
+// for (const score of ratings) {
+//   console.log(score);
+// }
+//{user: 'John', score: 3}
+
+// for...of vs. for...in
+
+// let scores = [10, 20, 30];
+// scores.message = "Hi";
+
+// for (let score in scores) {
+//   console.log(score); // 0,1,2,message
+// }
+// for (let score of scores) {
+//   console.log(score); // 10,20,30
+// }
+
+// 6) Destructuring Assignment
+
+// function getScores() {
+//   return [70, 80];
+// }
+
+// let [x, y, z] = getScores();
+
+// console.log(x); // 70
+// console.log(y); // 80
+// console.log(z); // undefined
+
+// function getScores() {
+//     return [70, 80, 90, 100];
+//  }
+
+//  let [x, y, z] = getScores();
+
+//  console.log(x); // 70
+//  console.log(y); // 80
+//  console.log(z); // 90
+
+// let [x, y ,...args] = getScores();
+// console.log(x); // 70
+// console.log(y); // 80
+// console.log(args); // [90, 100]
+
+// function getItems() {
+//   return null;
+// }
+
+// let [x = 1, y = 2] = getItems();
+//Uncaught TypeError: getItems is not a function or its return value is not iterable
+
+// solution
+// let [a = 10, b = 20] = getItems() || [];
+
+// console.log(a); // 10
+// console.log(b); // 20
+
+// const a = 1;
+// const b = "ok";
+// console.log(a && b); // if a = undefine,null,false or "" then a is log
+// if a = " ",string with length >0,true and  all other value then b is log
+
+// const a = "";
+// const b = "ok";
+// console.log(a || b);
+// if a = undefine,null,false or "" then b is log
+// if a = " ",string with length >0,true and  all other value then a is log
+
+// if ("" == true) console.log("ok");
+// else console.log("nope"); // nope
+
+// 6.2) object Destructuring
+// let person = {
+//   firstName: "John",
+//   lastName: "Doe",
+// };
+
+// let { firstName: fname, lastName: lname } = person;
+// // let { property1: variable1, property2: variable2 } = object;
+
+// let { firstName, lastName } = person;
+
+// console.log(firstName); // 'John'
+// console.log(lastName); // 'Doe'
+// // If the variables have the same names as the properties of the object,
